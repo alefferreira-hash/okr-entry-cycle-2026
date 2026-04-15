@@ -143,6 +143,16 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 .gloss-def{font-size:12px;color:var(--gray-500);line-height:1.55}
 .footer{text-align:center;font-size:12px;color:var(--gray-400);padding:40px;border-top:1px solid var(--border);margin-top:80px}
 .footer strong{color:var(--gray-700)}
+/* NAV */
+.site-nav{background:rgba(5,0,10,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:200}
+.site-nav-inner{max-width:920px;margin:0 auto;padding:0 44px;display:flex;align-items:center;justify-content:space-between;height:48px}
+.nav-brand{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-link{font-size:12px;font-weight:600;text-decoration:none;padding:6px 14px;border-radius:20px;transition:all .15s;display:flex;align-items:center;gap:6px;white-space:nowrap}
+.nav-link-ghost{color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.15)}
+.nav-link-ghost:hover{color:#fff;border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.06)}
+.nav-link-active{color:#fff;background:rgba(168,85,247,.25);border:1px solid rgba(168,85,247,.4)}
+.nav-dot{width:6px;height:6px;border-radius:50%;background:var(--nu-bright)}
 @media(max-width:680px){
   .metrics-row,.pp-cols,.gloss-grid{grid-template-columns:1fr}
   .stats{gap:12px}
@@ -151,10 +161,22 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
   .pp-section{padding:28px 20px}
   .kr-next-badges{padding-left:0}
   .kr-dep{margin-left:0;margin-right:0}
+  .site-nav-inner{padding-left:20px;padding-right:20px}
 }
 </style>
 </head>
 <body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="./" class="nav-brand">Entry Cycle · 2026</a>
+    <div class="nav-links">
+      <a href="./" class="nav-link nav-link-active"><span class="nav-dot"></span> OKRs</a>
+      <a href="./roadmap/" class="nav-link nav-link-ghost">Roadmap →</a>
+    </div>
+  </div>
+</nav>
 
 <!-- HERO -->
 <div class="hero">
@@ -727,7 +749,8 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 
 <div class="footer">
   <strong>Entry Cycle · InvOps Brasil · 2026</strong><br>
-  Baseado no Maturity Index 3.0 — Scorecard Entry Cycle · Abr–Dez 2026
+  Baseado no Maturity Index 3.0 — Scorecard Entry Cycle · Abr–Dez 2026<br><br>
+  <a href="./roadmap/" style="color:var(--nu);font-weight:600;text-decoration:none;font-size:12px;">Ver Roadmap de execução →</a>
 </div>
 
 <script>
