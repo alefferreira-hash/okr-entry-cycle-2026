@@ -8,51 +8,25 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --nu:#8A05BE;
-  --nu2:#6200A3;
-  --nu3:#430073;
-  --nu-light:#F3E8FF;
-  --nu-pale:#FAF5FF;
-  --nu-mid:#C084FC;
-  --nu-bright:#A855F7;
-  --o1:#4C1D95;
-  --o2:#1E1B4B;
-  --o3:#0F172A;
-  --o1-accent:#7C3AED;
-  --o2-accent:#4338CA;
-  --o3-accent:#0EA5E9;
-  --white:#FFFFFF;
-  --gray-50:#F9F8FF;
-  --gray-100:#F0EEF8;
-  --gray-200:#E2DFF2;
-  --gray-300:#C4BFE0;
-  --gray-400:#9490B8;
-  --gray-500:#5E5A80;
-  --gray-700:#2E2A50;
-  --gray-900:#1A1730;
-  --border:#E4E0F5;
-  --r:14px;--rs:10px;
+  --nu:#8A05BE;--nu2:#6200A3;--nu3:#430073;--nu-light:#F3E8FF;--nu-pale:#FAF5FF;
+  --nu-mid:#C084FC;--nu-bright:#A855F7;--o1:#4C1D95;--o2:#1E1B4B;--o3:#0F172A;
+  --o1-accent:#7C3AED;--o2-accent:#4338CA;--o3-accent:#0EA5E9;--white:#FFFFFF;
+  --gray-50:#F9F8FF;--gray-100:#F0EEF8;--gray-200:#E2DFF2;--gray-300:#C4BFE0;
+  --gray-400:#9490B8;--gray-500:#5E5A80;--gray-700:#2E2A50;--gray-900:#1A1730;
+  --border:#E4E0F5;--r:14px;--rs:10px;
 }
 body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
-
-/* ══ HERO ══ */
 .hero{background:linear-gradient(135deg,#05000A 0%,#120020 35%,#200040 65%,#3B006A 100%);color:#fff;padding:44px 0 72px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-20%;right:-5%;width:700px;height:700px;background:radial-gradient(circle,rgba(168,85,247,.2) 0%,transparent 65%);pointer-events:none}
 .hero::after{content:'';position:absolute;bottom:-40%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(139,5,190,.18) 0%,transparent 65%);pointer-events:none}
 .hero-inner{max-width:920px;margin:0 auto;padding:0 44px;position:relative;z-index:1}
-
-/* topo: eyebrow à esq, badge OKRs 2026 à dir */
 .hero-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
 .eyebrow{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--nu-mid);display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:'';width:24px;height:1px;background:var(--nu-mid)}
 .hero-badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:8px 18px;font-size:12px;font-weight:700;color:#fff;letter-spacing:.06em;backdrop-filter:blur(8px);white-space:nowrap}
-
-/* título alinhado à esquerda, menor */
 .hero-okrs-label{font-size:13px;font-weight:400;color:rgba(255,255,255,.5);letter-spacing:.04em;margin-bottom:6px}
 .hero h1{font-size:clamp(18px,2.4vw,26px);font-weight:700;line-height:1.35;margin-bottom:0;color:#fff;letter-spacing:-.01em;text-align:left;max-width:720px}
 .hero h1 em{font-weight:300;font-style:normal;color:rgba(255,255,255,.75)}
-
-/* STATS — cards brancos entre hero e página */
 .stats-bridge{background:linear-gradient(180deg,#3B006A 0%,#F7F5FF 55%)}
 .stats-bridge-inner{max-width:920px;margin:0 auto;padding:0 44px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:28px 0 36px}
@@ -60,78 +34,57 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 .stat-balloon::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--nu)}
 .stat-num{font-size:26px;font-weight:800;line-height:1;color:var(--nu);display:block}
 .stat-label{font-size:12px;font-weight:700;color:var(--gray-700);display:block}
-
-/* ══ MAIN ══ */
 .main{max-width:920px;margin:0 auto;padding:80px 44px 100px}
 .sec-label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-400);margin-bottom:40px;display:flex;align-items:center;gap:12px}
 .sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
-
-/* ══ OBJ BLOCK ══ */
 .obj-block{margin-bottom:40px;border-radius:var(--r);overflow:hidden;box-shadow:0 2px 16px rgba(138,5,190,.08);border:1px solid var(--border)}
-
-/* OBJ HEADER — fundo escuro, título PRETO no banner claro interno, desc cinza escuro */
 .obj-header-card{border-radius:0;overflow:visible;position:relative}
 .obj-block:nth-child(1) .obj-header-card{background:var(--o1)}
 .obj-block:nth-child(3) .obj-header-card{background:var(--o2)}
 .obj-block:nth-child(5) .obj-header-card{background:var(--o3)}
-
-/* faixa colorida no topo */
 .obj-block:nth-child(1) .obj-header-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--o1-accent)}
 .obj-block:nth-child(3) .obj-header-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--o2-accent)}
 .obj-block:nth-child(5) .obj-header-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--o3-accent)}
-
 .obj-header-inner{padding:20px 32px 0}
 .obj-eyebrow-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-
-/* pill roxo negrito */
 .obj-pill{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-radius:20px;padding:5px 16px;color:var(--nu-bright);background:rgba(168,85,247,.18);border:1.5px solid rgba(168,85,247,.35)}
-
-/* título e desc ficam num painel claro abaixo — sem arredondamento para conectar com KRs */
 .obj-title-panel{background:#fff;padding:18px 32px 20px;border-bottom:1px solid var(--border)}
 .obj-title{font-size:clamp(16px,2.2vw,20px);font-weight:700;line-height:1.35;color:#111;margin-bottom:10px}
 .obj-desc{font-size:13px;color:#444;line-height:1.8;max-width:700px}
-
-/* KR cards conectados ao obj header */
 .kr-card{background:var(--white);border:none;border-top:1px solid var(--border);margin-bottom:0;overflow:hidden;transition:box-shadow .2s}
 .kr-card:hover{background:#FDFCFF}
-.kr-card:last-child{border-radius:0}
-
-/* ══ KR CARD ══ */
 .kr-header{padding:20px 24px 0;cursor:pointer;user-select:none}
 .kr-top-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:12px}
-
-/* balão translúcido com número do KR */
 .kr-icon{width:36px;height:36px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;letter-spacing:.01em;margin-top:2px}
 .obj-block:nth-child(1) .kr-icon{background:rgba(124,58,237,.12);color:#7C3AED;border:1.5px solid rgba(124,58,237,.25)}
 .obj-block:nth-child(3) .kr-icon{background:rgba(67,56,202,.12);color:#4338CA;border:1.5px solid rgba(67,56,202,.25)}
 .obj-block:nth-child(5) .kr-icon{background:rgba(14,165,233,.12);color:#0EA5E9;border:1.5px solid rgba(14,165,233,.25)}
-
 .kr-text-wrap{flex:1}
 .kr-eyebrow{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:5px}
 .obj-block:nth-child(1) .kr-eyebrow{color:var(--o1-accent)}
 .obj-block:nth-child(3) .kr-eyebrow{color:var(--o2-accent)}
 .obj-block:nth-child(5) .kr-eyebrow{color:var(--o3-accent)}
 .kr-title{font-size:15px;font-weight:700;color:var(--gray-900);line-height:1.5}
-
-.kr-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;padding-left:50px}
+.kr-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;padding-left:50px}
 .chip{font-size:11px;font-weight:500;border-radius:20px;padding:3px 12px}
-.chip-ia   {background:#F3E8FF;color:#6D28D9}
-.chip-gov  {background:#FEE2E2;color:#B91C1C}
-.chip-efic {background:#FEF3C7;color:#B45309}
-.chip-edf  {background:#D1FAE5;color:#065F46}
-.chip-gray {background:var(--gray-100);color:var(--gray-500)}
-
-/* TOGGLE */
+.chip-ia{background:#F3E8FF;color:#6D28D9}
+.chip-gov{background:#FEE2E2;color:#B91C1C}
+.chip-efic{background:#FEF3C7;color:#B45309}
+.chip-edf{background:#D1FAE5;color:#065F46}
+.kr-next-badges{display:flex;flex-wrap:wrap;gap:6px;padding-left:50px;margin-bottom:14px}
+.nbadge{font-size:11px;font-weight:600;border-radius:20px;padding:4px 12px;display:inline-flex;align-items:center;gap:5px;line-height:1.3}
+.nbadge-infra{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.nbadge-doc{background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0}
+.nbadge-valid{background:var(--nu-light);color:var(--nu2);border:1px solid var(--nu-mid)}
+.kr-dep{margin:0 24px 14px;padding:10px 14px;background:#FFF7ED;border:1px solid #FED7AA;border-left:4px solid #F97316;border-radius:8px;display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#92400E;line-height:1.5}
+.kr-dep-icon{font-size:14px;flex-shrink:0;margin-top:1px}
+.kr-dep strong{font-weight:700;color:#7C2D12}
 .kr-toggle-row{display:flex;justify-content:flex-end;padding:0 26px 18px}
 .toggle-btn{font-size:12px;color:var(--nu);font-weight:600;display:flex;align-items:center;gap:5px;border:none;background:none;cursor:pointer;font-family:'DM Sans',sans-serif}
 .toggle-icon{display:inline-block;transition:transform .25s;font-size:17px;line-height:1}
 .kr-card.open .toggle-icon{transform:rotate(90deg)}
-
-/* ══ KR DETAIL ══ */
 .kr-detail{display:none;border-top:1px solid var(--border);padding:28px;background:var(--gray-50)}
 .kr-card.open .kr-detail{display:block}
-
-/* BALÕES métricas — borda colorida no topo */
 .metrics-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
 .metric-balloon{border-radius:12px;padding:18px 20px;background:#fff;border:1px solid var(--border);border-top:4px solid transparent;text-align:left}
 .metric-balloon.bl{border-top-color:#7C3AED}
@@ -144,15 +97,11 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 .metric-balloon.st .metric-balloon-lbl{color:#92400E}
 .metric-balloon-val{font-size:13px;line-height:1.5;color:var(--gray-700)}
 .metric-balloon-val strong{font-weight:700;color:var(--gray-900)}
-
-/* BALÃO narrativa — borda roxa no topo */
 .narrative-balloon{background:#fff;border:1px solid var(--border);border-top:4px solid var(--nu-bright);border-radius:12px;padding:20px 24px;margin-bottom:18px}
 .narrative-balloon-lbl{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--nu-bright);margin-bottom:10px;display:flex;align-items:center;gap:8px}
 .narrative-balloon-lbl::before{content:'';width:14px;height:2px;background:var(--nu-bright);border-radius:2px;flex-shrink:0}
 .narrative-text{font-size:13.5px;color:var(--gray-500);line-height:1.85}
 .narrative-text strong{color:var(--gray-900);font-weight:600}
-
-/* BALÕES BETs — borda dourada no topo */
 .bets-section-lbl{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .bets-section-lbl-icon{font-size:14px}
 .bets-grid{display:flex;flex-direction:column;gap:10px}
@@ -160,56 +109,52 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 .bet-trophy{font-size:24px;flex-shrink:0;margin-top:1px}
 .bet-name{font-size:13px;font-weight:700;color:var(--gray-900);margin-bottom:5px}
 .bet-desc{font-size:12px;color:var(--gray-500);line-height:1.65}
-
-/* ══ DIVIDER ══ */
 .divider{border:none;border-top:1px solid var(--border);margin:36px 0}
-
-/* ══ PRÓXIMOS PASSOS ══ */
+.legend-box{background:var(--white);border:1px solid var(--border);border-radius:var(--rs);padding:20px 24px;margin-top:48px}
+.legend-title{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-400);margin-bottom:14px}
+.legend-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.legend-dep{font-size:11px;font-weight:600;border-radius:20px;padding:4px 12px;display:inline-flex;align-items:center;gap:5px;background:#FFF7ED;color:#92400E;border:1px solid #FED7AA}
 .pp-section{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:44px;margin-top:72px}
 .pp-section h2{font-size:22px;font-weight:700;color:var(--gray-900);margin-bottom:6px}
 .pp-sub{font-size:13px;color:var(--gray-400);margin-bottom:36px}
 .pp-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
 .pp-col-title{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid;display:flex;align-items:center;gap:7px}
 .pp-col-infra .pp-col-title{color:#1D4ED8;border-color:#BFDBFE}
-.pp-col-doc   .pp-col-title{color:#15803D;border-color:#BBF7D0}
-.pp-col-val   .pp-col-title{color:var(--nu);border-color:#DDD6FE}
+.pp-col-doc .pp-col-title{color:#15803D;border-color:#BBF7D0}
+.pp-col-val .pp-col-title{color:var(--nu);border-color:#DDD6FE}
 .pp-items{display:flex;flex-direction:column;gap:10px}
 .pp-item{display:flex;align-items:flex-start;gap:10px;background:var(--gray-50);border-radius:8px;padding:12px 14px;border:1px solid var(--border)}
 .pp-check{width:16px;height:16px;border-radius:4px;flex-shrink:0;margin-top:2px;cursor:pointer;accent-color:var(--nu)}
 .pp-item-body{flex:1}
+.pp-item-kr{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--nu2);margin-bottom:3px}
 .pp-item-text{font-size:13px;color:var(--gray-700);line-height:1.5}
 .pp-item-text.done{text-decoration:line-through;color:var(--gray-300)}
 .pp-resp{display:flex;align-items:center;gap:5px;margin-top:6px}
 .pp-resp-label{font-size:11px;color:var(--gray-300);white-space:nowrap}
-.pp-resp-input{font-size:11px;border:none;border-bottom:1px dashed var(--gray-200);background:transparent;color:var(--gray-500);padding:1px 3px;width:100px;outline:none;font-family:'DM Sans',sans-serif}
+.pp-resp-input{font-size:11px;border:none;border-bottom:1px dashed var(--gray-200);background:transparent;color:var(--gray-500);padding:1px 3px;width:120px;outline:none;font-family:'DM Sans',sans-serif}
 .pp-resp-input:focus{border-bottom-color:var(--nu)}
 .pp-resp-input::placeholder{color:var(--gray-200)}
-
-/* ══ GLOSSARY ══ */
 .gloss{margin-top:60px}
 .gloss h2{font-size:22px;font-weight:700;margin-bottom:24px;color:var(--gray-900)}
 .gloss-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .gloss-item{background:var(--white);border:1px solid var(--border);border-radius:var(--rs);padding:16px 20px}
 .gloss-term{font-size:13px;font-weight:700;color:var(--nu2);margin-bottom:4px}
 .gloss-def{font-size:12px;color:var(--gray-500);line-height:1.55}
-
-/* ══ FOOTER ══ */
 .footer{text-align:center;font-size:12px;color:var(--gray-400);padding:40px;border-top:1px solid var(--border);margin-top:80px}
 .footer strong{color:var(--gray-700)}
-
 @media(max-width:680px){
   .metrics-row,.pp-cols,.gloss-grid{grid-template-columns:1fr}
   .stats{gap:12px}
-  .stat-balloon{min-width:90px;padding:16px 20px}
   .hero-inner,.main{padding-left:24px;padding-right:24px}
   .obj-title-panel,.obj-header-inner{padding-left:20px;padding-right:20px}
   .pp-section{padding:28px 20px}
+  .kr-next-badges{padding-left:0}
+  .kr-dep{margin-left:0;margin-right:0}
 }
 </style>
 </head>
 <body>
 
-<!-- ══ HERO ══ -->
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-top">
@@ -217,9 +162,10 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
       <div class="hero-badge">OKRs 2026</div>
     </div>
     <div class="hero-okrs-label">OKRs</div>
-    <h1><strong>Elevar a excelência técnica</strong> <em>e a maturidade do Entry Cycle, com eficiência, governança e impacto real na integração de analistas.</em></h1>
+    <h1><strong>Elevar a excelência técnica</strong> <em>e a maturidade da pack Entry Cycle, com eficiência, governança e impacto real na integração de analistas.</em></h1>
   </div>
 </div>
+
 <div class="stats-bridge">
   <div class="stats-bridge-inner">
     <div class="stats">
@@ -234,15 +180,13 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 <div class="main">
   <div class="sec-label">Objetivos e Key Results</div>
 
-  <!-- ══════════ OBJETIVO 1 ══════════ -->
+  <!-- OBJETIVO 1 -->
   <div class="obj-block">
     <div class="obj-header-card">
-      <div class="obj-header-inner">
-        <div class="obj-eyebrow-row"><span class="obj-pill">Objetivo 1</span></div>
-      </div>
+      <div class="obj-header-inner"><div class="obj-eyebrow-row"><span class="obj-pill">Objetivo 1</span></div></div>
       <div class="obj-title-panel">
         <div class="obj-title">Elevar a excelência técnica e a eficiência de Entry Cycle, aumentando a maturidade da pack no Maturity Index</div>
-        <div class="obj-desc">Para evoluir no Maturity Index, o pack precisa operar com IA instrumentada, processos documentados em nível ≥ 3 e responsabilidades distribuídas sem pontos únicos de falha. Este objetivo transforma práticas informais em infraestrutura confiável, auditável e escalável.</div>
+        <div class="obj-desc">Para evoluir no Maturity Index, o pack precisa operar com IA instrumentada, processos documentados em nível igual ou superior a 3 e responsabilidades distribuídas sem pontos únicos de falha. Este objetivo transforma práticas informais em infraestrutura confiável, auditável e escalável.</div>
       </div>
     </div>
 
@@ -256,26 +200,28 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
             <div class="kr-title">Implementar IA em 3 fluxos críticos, garantindo 100% de revisão humana e mensuração de ganho de tempo em atividades da pack</div>
           </div>
         </div>
-        <div class="kr-chips">
-          <span class="chip chip-ia">✦ IA</span>
-          <span class="chip chip-gray">Abr–Dez 2026</span>
+        <div class="kr-chips"><span class="chip chip-ia">✦ IA</span></div>
+        <div class="kr-next-badges">
+          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
+          <span class="nbadge nbadge-doc">📄 Documentação</span>
+          <span class="nbadge nbadge-valid">✅ Validação</span>
         </div>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr11')">Ver detalhes <span class="toggle-icon">›</span></button></div>
       <div class="kr-detail">
         <div class="metrics-row">
-          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val"><strong>0 fluxos</strong> — nenhuma atividade usa IA de forma estruturada hoje</div></div>
+          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val"><strong>0 fluxos,</strong> nenhuma atividade usa IA de forma estruturada hoje</div></div>
           <div class="metric-balloon mt"><span class="metric-balloon-icon">🎯</span><span class="metric-balloon-lbl">Meta</span><div class="metric-balloon-val"><strong>3 fluxos</strong> com IA ativa, 100% revisão humana e ganho de tempo mensurado</div></div>
-          <div class="metric-balloon st"><span class="metric-balloon-icon">🚀</span><span class="metric-balloon-lbl">Stretch</span><div class="metric-balloon-val">Redução <strong>≥ 30%</strong> no tempo médio das atividades instrumentadas</div></div>
+          <div class="metric-balloon st"><span class="metric-balloon-icon">🚀</span><span class="metric-balloon-lbl">Stretch</span><div class="metric-balloon-val">Redução <strong>igual ou superior a 30%</strong> no tempo médio das atividades instrumentadas</div></div>
         </div>
         <div class="narrative-balloon">
           <div class="narrative-balloon-lbl">Contexto e como medir</div>
-          <div class="narrative-text">Estamos saindo de um pack sem nenhum uso estruturado de IA — onde atividades como geração de avaliações, resumo de red flags e relatórios de turma são feitas manualmente. Queremos chegar em <strong>3 fluxos críticos instrumentados com IA</strong>, com protocolo de revisão humana obrigatório e mensuração real do tempo economizado.<br><br><strong>Como medir:</strong> número de fluxos com IA ativa e protocolo documentado / total de 3 planejados — mais o registro de tempo antes vs. depois em cada fluxo.</div>
+          <div class="narrative-text">Estamos saindo de um pack sem nenhum uso estruturado de IA, onde atividades como geração de avaliações, resumo de red flags e relatórios de turma são feitas manualmente. Queremos chegar em <strong>3 fluxos críticos instrumentados com IA</strong>, com protocolo de revisão humana obrigatório e mensuração real do tempo economizado.<br><br><strong>Como medir:</strong> número de fluxos com IA ativa e protocolo documentado sobre o total de 3 planejados, mais o registro de tempo antes e depois em cada fluxo.</div>
         </div>
         <div class="bets-section-lbl"><span class="bets-section-lbl-icon">🏆</span> Apostas (BETs)</div>
         <div class="bets-grid">
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Mapeamento e implementação dos fluxos com IA</div><div class="bet-desc">Levantar as atividades repetitivas do pack, selecionar os 3 com maior potencial — critério: volume × tempo gasto × risco de erro — e implementar com protocolo de revisão humana antes de qualquer output chegar à operação.</div></div></div>
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Mensuração e registro de ganho de tempo</div><div class="bet-desc">Registrar tempo de execução antes e depois da IA em cada fluxo instrumentado — dados que sustentam a evolução no Maturity Index e a apresentação para M2/M3.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Mapeamento e implementação dos fluxos com IA</div><div class="bet-desc">Levantar as atividades repetitivas da pack, selecionar os 3 com maior potencial, critério: volume multiplicado por tempo gasto e risco de erro, e implementar com protocolo de revisão humana antes de qualquer output chegar à operação.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Mensuração e registro de ganho de tempo</div><div class="bet-desc">Registrar tempo de execução antes e depois da IA em cada fluxo instrumentado, dados que sustentam a evolução no Maturity Index e a apresentação para M2/M3.</div></div></div>
         </div>
       </div>
     </div>
@@ -287,26 +233,31 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
           <div class="kr-icon">1.2</div>
           <div class="kr-text-wrap">
             <div class="kr-eyebrow">Key Result 1.2</div>
-            <div class="kr-title">Garantir documentação técnica nível ≥ 3 para 100% dos processos, com fluxogramas, rotinas de atualização e aprovação em auditoria, focando em Quality Assurance (QA)</div>
+            <div class="kr-title">Garantir documentação técnica nível igual ou superior a 3 para 100% dos processos, com fluxogramas, rotinas de atualização e aprovação em auditoria, focando em Quality Assurance (QA)</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-gov">Governança / QA</span><span class="chip chip-gray">Abr/26 → Out/26</span></div>
+        <div class="kr-chips"><span class="chip chip-gov">Governança / QA</span></div>
+        <div class="kr-next-badges">
+          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
+          <span class="nbadge nbadge-doc">📄 Documentação</span>
+          <span class="nbadge nbadge-valid">✅ Validação</span>
+        </div>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr12')">Ver detalhes <span class="toggle-icon">›</span></button></div>
       <div class="kr-detail">
         <div class="metrics-row">
-          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val">% atual a definir em inventário — estimativa: maioria abaixo de nível 3</div></div>
-          <div class="metric-balloon mt"><span class="metric-balloon-icon">🎯</span><span class="metric-balloon-lbl">Meta</span><div class="metric-balloon-val"><strong>100%</strong> dos processos com documentação nível ≥ 3 aprovada em auditoria</div></div>
+          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val">% atual a definir em inventário, estimativa: maioria abaixo de nível 3</div></div>
+          <div class="metric-balloon mt"><span class="metric-balloon-icon">🎯</span><span class="metric-balloon-lbl">Meta</span><div class="metric-balloon-val"><strong>100%</strong> dos processos com documentação nível igual ou superior a 3 aprovada em auditoria</div></div>
           <div class="metric-balloon st"><span class="metric-balloon-icon">🚀</span><span class="metric-balloon-lbl">Stretch</span><div class="metric-balloon-val">Dashboard de status da documentação com owner e data de próxima revisão</div></div>
         </div>
         <div class="narrative-balloon">
           <div class="narrative-balloon-lbl">Contexto e como medir</div>
-          <div class="narrative-text">Estamos saindo de processos sem documentação padronizada — sem fluxograma, sem owner, sem rotina de atualização. Queremos chegar em <strong>100% dos processos documentados em nível ≥ 3</strong>, com foco em QA: fluxograma atualizado, responsável definido e aprovação em auditoria interna.<br><br><strong>Como medir:</strong> % de processos aprovados no checklist de conformidade nível 3 / total de processos mapeados.</div>
+          <div class="narrative-text">Estamos saindo de processos sem documentação padronizada, sem fluxograma, sem owner, sem rotina de atualização. Queremos chegar em <strong>100% dos processos documentados em nível igual ou superior a 3</strong>, com foco em QA: fluxograma atualizado, responsável definido e aprovação em auditoria interna.<br><br><strong>Como medir:</strong> percentual de processos aprovados no checklist de conformidade nível 3 sobre o total de processos mapeados.</div>
         </div>
         <div class="bets-section-lbl"><span class="bets-section-lbl-icon">🏆</span> Apostas (BETs)</div>
         <div class="bets-grid">
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Inventário, diagnóstico e produção de documentação nível 3</div><div class="bet-desc">Listar todos os processos ativos, avaliar nível atual, criar ou atualizar fluxogramas com responsáveis, inputs, outputs, rotinas de atualização e critérios de QA — entregável auditável por processo.</div></div></div>
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Auditoria interna e ciclo de revisão contínua</div><div class="bet-desc">Submeter documentação ao checklist de conformidade nível 3 e definir cadência de revisão trimestral — mantendo nível ≥ 3 até o fechamento do ciclo em Dez/26.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Inventário, diagnóstico e produção de documentação nível 3</div><div class="bet-desc">Listar todos os processos ativos, avaliar nível atual, criar ou atualizar fluxogramas com responsáveis, inputs, outputs, rotinas de atualização e critérios de QA, entregável auditável por processo.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Auditoria interna e ciclo de revisão contínua</div><div class="bet-desc">Submeter documentação ao checklist de conformidade nível 3 e definir cadência de revisão trimestral, mantendo nível igual ou superior a 3 até o fechamento do ciclo em Dez/26.</div></div></div>
         </div>
       </div>
     </div>
@@ -321,23 +272,28 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
             <div class="kr-title">Mapear os processos das três frentes em uma matriz de responsabilidades que elimine pontos únicos de falha</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-gov">Governança / SPOF</span><span class="chip chip-gray">BL: 0% sem SPOF · Meta: 100%</span></div>
+        <div class="kr-chips"><span class="chip chip-gov">Governança / SPOF</span></div>
+        <div class="kr-next-badges">
+          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
+          <span class="nbadge nbadge-doc">📄 Documentação</span>
+          <span class="nbadge nbadge-valid">✅ Validação</span>
+        </div>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr13')">Ver detalhes <span class="toggle-icon">›</span></button></div>
       <div class="kr-detail">
         <div class="metrics-row">
-          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val"><strong>0%</strong> dos processos sem SPOF — todos possuem dependência crítica individual</div></div>
+          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val"><strong>0%</strong> dos processos sem SPOF, todos possuem dependência crítica individual</div></div>
           <div class="metric-balloon mt"><span class="metric-balloon-icon">🎯</span><span class="metric-balloon-lbl">Meta</span><div class="metric-balloon-val"><strong>100%</strong> dos processos com RACI e zero SPOFs validados em auditoria</div></div>
-          <div class="metric-balloon st"><span class="metric-balloon-icon">🚀</span><span class="metric-balloon-lbl">Stretch</span><div class="metric-balloon-val">Auditoria de resiliência semestral — simulação de ausência sem degradação</div></div>
+          <div class="metric-balloon st"><span class="metric-balloon-icon">🚀</span><span class="metric-balloon-lbl">Stretch</span><div class="metric-balloon-val">Auditoria de resiliência semestral, simulação de ausência sem degradação</div></div>
         </div>
         <div class="narrative-balloon">
           <div class="narrative-balloon-lbl">Contexto e como medir</div>
-          <div class="narrative-text">Estamos saindo de processos que dependem de uma única pessoa — risco real de interrupção a cada ausência. Queremos chegar em uma <strong>matriz RACI completa para as três frentes</strong>, com zero SPOFs confirmados em auditoria de resiliência.<br><br><strong>Como medir:</strong> simulação de ausência de membro-chave por processo — o processo continua sem degradação? Validado por par externo ao pack.</div>
+          <div class="narrative-text">Estamos saindo de processos que dependem de uma única pessoa, com risco real de interrupção a cada ausência. Queremos chegar em uma <strong>matriz RACI completa para as três frentes</strong>, com zero SPOFs confirmados em auditoria de resiliência.<br><br><strong>Como medir:</strong> simulação de ausência de membro-chave por processo. O processo continua sem degradação? Validado por par externo à pack.</div>
         </div>
         <div class="bets-section-lbl"><span class="bets-section-lbl-icon">🏆</span> Apostas (BETs)</div>
         <div class="bets-grid">
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Construção da RACI e identificação de SPOFs</div><div class="bet-desc">Mapear quem Executa, Aprova, é Consultado e Informado em cada processo — identificando dependências individuais e propondo redistribuição com backup formal.</div></div></div>
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Auditoria de resiliência com validação externa</div><div class="bet-desc">Simular ausência de membro-chave por processo — entregável: relatório com evidência de zero SPOFs, validado por par externo ao pack.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Construção da RACI e identificação de SPOFs</div><div class="bet-desc">Mapear quem Executa, Aprova, é Consultado e Informado em cada processo, identificando dependências individuais e propondo redistribuição com backup formal.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Auditoria de resiliência com validação externa</div><div class="bet-desc">Simular ausência de membro-chave por processo, entregável: relatório com evidência de zero SPOFs, validado por par externo à pack.</div></div></div>
         </div>
       </div>
     </div>
@@ -345,15 +301,13 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 
   <hr class="divider">
 
-  <!-- ══════════ OBJETIVO 2 ══════════ -->
+  <!-- OBJETIVO 2 -->
   <div class="obj-block">
     <div class="obj-header-card">
-      <div class="obj-header-inner">
-        <div class="obj-eyebrow-row"><span class="obj-pill">Objetivo 2</span></div>
-      </div>
+      <div class="obj-header-inner"><div class="obj-eyebrow-row"><span class="obj-pill">Objetivo 2</span></div></div>
       <div class="obj-title-panel">
-        <div class="obj-title">Ganhar eficiência e previsibilidade no uso de horas do Entry Cycle</div>
-        <div class="obj-desc">Hoje as horas do time — trainers, buddies e supervisores — não são planejadas nem rastreadas com precisão. Isso gera sobrecarga invisível, desequilíbrio de carga e incapacidade de prever o impacto de uma nova turma no calendário.</div>
+        <div class="obj-title">Ganhar eficiência e previsibilidade no uso de horas da pack Entry Cycle</div>
+        <div class="obj-desc">Hoje as horas do time, trainers, buddies e supervisores, não são planejadas nem rastreadas com precisão. Isso gera sobrecarga invisível, desequilíbrio de carga e incapacidade de prever o impacto de uma nova turma no calendário.</div>
       </div>
     </div>
 
@@ -364,26 +318,31 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
           <div class="kr-icon">2.1</div>
           <div class="kr-text-wrap">
             <div class="kr-eyebrow">Key Result 2.1</div>
-            <div class="kr-title">Mapear 100% das atividades do Entry Cycle na matriz de WFM, com estimativa padrão de horas por tarefa (tarefas com estimativa / total de tarefas = 100%)</div>
+            <div class="kr-title">Mapear 100% das atividades da pack Entry Cycle na matriz de WFM, com estimativa padrão de horas por tarefa (tarefas com estimativa / total de tarefas = 100%)</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-efic">Eficiência / WFM</span><span class="chip chip-gray">BL: 0% · Meta: Jun/26</span></div>
+        <div class="kr-chips"><span class="chip chip-efic">Eficiência / WFM</span></div>
+        <div class="kr-next-badges">
+          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
+          <span class="nbadge nbadge-doc">📄 Documentação</span>
+          <span class="nbadge nbadge-valid">✅ Validação</span>
+        </div>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr21')">Ver detalhes <span class="toggle-icon">›</span></button></div>
       <div class="kr-detail">
         <div class="metrics-row">
-          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val"><strong>0%</strong> das atividades com estimativa formal — WFM não existe no pack hoje</div></div>
+          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val"><strong>0%</strong> das atividades com estimativa formal, WFM não existe na pack hoje</div></div>
           <div class="metric-balloon mt"><span class="metric-balloon-icon">🎯</span><span class="metric-balloon-lbl">Meta</span><div class="metric-balloon-val"><strong>100%</strong> das atividades com estimativa-padrão validada na matriz de WFM</div></div>
           <div class="metric-balloon st"><span class="metric-balloon-icon">🚀</span><span class="metric-balloon-lbl">Stretch</span><div class="metric-balloon-val">Previsão automática de carga para novas turmas com base no histórico</div></div>
         </div>
         <div class="narrative-balloon">
           <div class="narrative-balloon-lbl">Contexto e como medir</div>
-          <div class="narrative-text">Estamos saindo de um pack sem controle formal de horas — não sabemos quantas horas uma talk consome nem qual é a carga real de um trainer. Queremos chegar em uma <strong>matriz WFM com 100% das atividades mapeadas</strong> e estimativas validadas pelo time.<br><br><strong>Como medir:</strong> tarefas com estimativa ÷ total de tarefas = 100%. Validação: aprovação formal do time no documento.</div>
+          <div class="narrative-text">Estamos saindo de uma pack sem controle formal de horas, não sabemos quantas horas uma talk consome nem qual é a carga real de um trainer. Queremos chegar em uma <strong>matriz WFM com 100% das atividades mapeadas</strong> e estimativas validadas pelo time.<br><br><strong>Como medir:</strong> tarefas com estimativa dividido pelo total de tarefas, resultado igual a 100%. Validação: aprovação formal do time no documento.</div>
         </div>
         <div class="bets-section-lbl"><span class="bets-section-lbl-icon">🏆</span> Apostas (BETs)</div>
         <div class="bets-grid">
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Inventário completo e criação da matriz WFM</div><div class="bet-desc">Listar todas as atividades recorrentes e eventuais por frente — talks, práticas, revisões de conteúdo, avaliações e governança — com estimativa-padrão e premissas validadas com o time.</div></div></div>
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Ritual de manutenção e atualização da matriz</div><div class="bet-desc">Definir cadência de revisão mensal — garantindo que novas atividades sejam incluídas e estimativas sejam calibradas ao longo de Dez/26.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Inventário completo e criação da matriz WFM</div><div class="bet-desc">Listar todas as atividades recorrentes e eventuais por frente, talks, práticas, revisões de conteúdo, avaliações e governança, com estimativa-padrão e premissas validadas com o time.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Ritual de manutenção e atualização da matriz</div><div class="bet-desc">Definir cadência de revisão mensal, garantindo que novas atividades sejam incluídas e estimativas sejam calibradas ao longo de Dez/26.</div></div></div>
         </div>
       </div>
     </div>
@@ -398,23 +357,32 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
             <div class="kr-title">Atingir nível 3 em WFM ao controlar 100% das horas de trainers e buddies, zerando o gap entre horas planejadas e trabalhadas</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-efic">WFM nível 3</span><span class="chip chip-gray">BL: sem controle · Meta: Dez/26</span></div>
+        <div class="kr-chips"><span class="chip chip-efic">WFM nível 3</span></div>
+        <div class="kr-next-badges">
+          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
+          <span class="nbadge nbadge-doc">📄 Documentação</span>
+          <span class="nbadge nbadge-valid">✅ Validação</span>
+        </div>
+      </div>
+      <div class="kr-dep">
+        <span class="kr-dep-icon">🔗</span>
+        <span><strong>Conciliado com KR 2.1</strong> — A matriz de WFM (KR 2.1) precisa estar 100% mapeada para que o controle e auditoria do gap entre planejado e realizado seja possível.</span>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr22')">Ver detalhes <span class="toggle-icon">›</span></button></div>
       <div class="kr-detail">
         <div class="metrics-row">
-          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val"><strong>Sem controle</strong> — horas não são registradas nem comparadas ao planejado</div></div>
-          <div class="metric-balloon mt"><span class="metric-balloon-icon">🎯</span><span class="metric-balloon-lbl">Meta</span><div class="metric-balloon-val"><strong>100% mapeado</strong> — gap entre planejado e realizado zerado mensalmente</div></div>
-          <div class="metric-balloon st"><span class="metric-balloon-icon">🚀</span><span class="metric-balloon-lbl">Stretch</span><div class="metric-balloon-val">Gap &lt; 5% e forecast automático de carga para turmas futuras</div></div>
+          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val"><strong>Sem controle,</strong> horas não são registradas nem comparadas ao planejado</div></div>
+          <div class="metric-balloon mt"><span class="metric-balloon-icon">🎯</span><span class="metric-balloon-lbl">Meta</span><div class="metric-balloon-val"><strong>100% mapeado,</strong> gap entre planejado e realizado zerado mensalmente</div></div>
+          <div class="metric-balloon st"><span class="metric-balloon-icon">🚀</span><span class="metric-balloon-lbl">Stretch</span><div class="metric-balloon-val">Gap inferior a 5% e forecast automático de carga para turmas futuras</div></div>
         </div>
         <div class="narrative-balloon">
           <div class="narrative-balloon-lbl">Contexto e como medir</div>
-          <div class="narrative-text">Estamos saindo de horas invisíveis — sem registro nem comparação com o planejado. Queremos chegar no <strong>nível 3 de WFM</strong>: 100% das horas controladas e gap zerado mensalmente.<br><br><strong>Como medir:</strong> gap = (horas realizadas − horas planejadas) ÷ horas planejadas × 100. Meta: gap zerado em todos os meses do ciclo.</div>
+          <div class="narrative-text">Estamos saindo de horas invisíveis, sem registro nem comparação com o planejado. Queremos chegar no <strong>nível 3 de WFM</strong>: 100% das horas controladas e gap zerado mensalmente.<br><br><strong>Como medir:</strong> gap = (horas realizadas menos horas planejadas) dividido por horas planejadas, multiplicado por 100. Meta: gap zerado em todos os meses do ciclo.</div>
         </div>
         <div class="bets-section-lbl"><span class="bets-section-lbl-icon">🏆</span> Apostas (BETs)</div>
         <div class="bets-grid">
           <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Registro semanal e fechamento mensal de horas</div><div class="bet-desc">Rotina semanal de registro por trainer e buddy, com fechamento mensal calculando o gap e identificando causas de desvio.</div></div></div>
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Dashboard de acompanhamento de WFM</div><div class="bet-desc">Visão consolidada de horas por frente, trainer e mês — insumo para planejamento de turmas e apresentação mensal do gap a M2/M3.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Dashboard de acompanhamento de WFM</div><div class="bet-desc">Visão consolidada de horas por frente, trainer e mês, insumo para planejamento de turmas e apresentação mensal do gap a M2/M3.</div></div></div>
         </div>
       </div>
     </div>
@@ -422,15 +390,13 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 
   <hr class="divider">
 
-  <!-- ══════════ OBJETIVO 3 ══════════ -->
+  <!-- OBJETIVO 3 -->
   <div class="obj-block">
     <div class="obj-header-card">
-      <div class="obj-header-inner">
-        <div class="obj-eyebrow-row"><span class="obj-pill">Objetivo 3</span></div>
-      </div>
+      <div class="obj-header-inner"><div class="obj-eyebrow-row"><span class="obj-pill">Objetivo 3</span></div></div>
       <div class="obj-title-panel">
         <div class="obj-title">Reposicionar a Escola de Fraude (EDF) como um programa de excelência focado na integração técnica de analistas em transição (Moves entre distritos)</div>
-        <div class="obj-desc">A EDF deixa de ser apenas um acompanhamento pós-onboarding e passa a ser o programa oficial de integração técnica para analistas em movimentação entre distritos — com presença, avaliação e média que comprovem a capacitação real.</div>
+        <div class="obj-desc">A EDF deixa de ser apenas um acompanhamento pós-onboarding e passa a ser o programa oficial de integração técnica para analistas em movimentação entre distritos, com presença, avaliação e média que comprovem a capacitação real.</div>
       </div>
     </div>
 
@@ -441,26 +407,31 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
           <div class="kr-icon">3.1</div>
           <div class="kr-text-wrap">
             <div class="kr-eyebrow">Key Result 3.1</div>
-            <div class="kr-title">Garantir que ≥ 90% dos analistas em Move passem pela trilha completa da EDF (presença e conclusão de avaliações)</div>
+            <div class="kr-title">Garantir que 90% ou mais dos analistas em Move passem pela trilha completa da EDF (presença e conclusão de avaliações)</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-edf">EDF</span><span class="chip chip-gray">Meta: ≥ 90% · Dez/26</span></div>
+        <div class="kr-chips"><span class="chip chip-edf">EDF</span></div>
+        <div class="kr-next-badges">
+          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
+          <span class="nbadge nbadge-doc">📄 Documentação</span>
+          <span class="nbadge nbadge-valid">✅ Validação</span>
+        </div>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr31')">Ver detalhes <span class="toggle-icon">›</span></button></div>
       <div class="kr-detail">
         <div class="metrics-row">
-          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val">A levantar em Abr/26 — histórico de cobertura de Moves pela trilha EDF</div></div>
-          <div class="metric-balloon mt"><span class="metric-balloon-icon">🎯</span><span class="metric-balloon-lbl">Meta</span><div class="metric-balloon-val"><strong>≥ 90%</strong> dos analistas em Move com trilha completa (presença + avaliações)</div></div>
+          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val">A levantar em Abr/26, histórico de cobertura de Moves pela trilha EDF</div></div>
+          <div class="metric-balloon mt"><span class="metric-balloon-icon">🎯</span><span class="metric-balloon-lbl">Meta</span><div class="metric-balloon-val"><strong>90% ou mais</strong> dos analistas em Move com trilha completa (presença e avaliações)</div></div>
           <div class="metric-balloon st"><span class="metric-balloon-icon">🚀</span><span class="metric-balloon-lbl">Stretch</span><div class="metric-balloon-val">100% de cobertura com convocação automática integrada ao fluxo de Moves</div></div>
         </div>
         <div class="narrative-balloon">
           <div class="narrative-balloon-lbl">Contexto e como medir</div>
-          <div class="narrative-text">Estamos saindo de uma EDF sem convocação formal — analistas em Move chegam sem trilha obrigatória, dependendo de comunicação manual. Queremos chegar em <strong>≥ 90% dos analistas em Move com trilha EDF concluída</strong>.<br><br><strong>Como medir:</strong> % analistas em Move com trilha EDF concluída ÷ total de Moves no período.</div>
+          <div class="narrative-text">Estamos saindo de uma EDF sem convocação formal, analistas em Move chegam sem trilha obrigatória, dependendo de comunicação manual. Queremos chegar em <strong>90% ou mais dos analistas em Move com trilha EDF concluída</strong>.<br><br><strong>Como medir:</strong> percentual de analistas em Move com trilha EDF concluída sobre o total de Moves no período.</div>
         </div>
         <div class="bets-section-lbl"><span class="bets-section-lbl-icon">🏆</span> Apostas (BETs)</div>
         <div class="bets-grid">
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Redesenho da trilha EDF para analistas em transição</div><div class="bet-desc">Adaptar conteúdo e fluxo para o perfil de Move — foco técnico no novo distrito, com carga e avaliações específicas por tipo de transição.</div></div></div>
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Processo de convocação automática de Moves</div><div class="bet-desc">Criar fluxo de convocação automática a cada novo Move — sem dependência de comunicação manual, com tracker de presença e avaliações por analista.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Redesenho da trilha EDF para analistas em transição</div><div class="bet-desc">Adaptar conteúdo e fluxo para o perfil de Move, foco técnico no novo distrito, com carga e avaliações específicas por tipo de transição.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Processo de convocação automática de Moves</div><div class="bet-desc">Criar fluxo de convocação automática a cada novo Move, sem dependência de comunicação manual, com tracker de presença e avaliações por analista.</div></div></div>
         </div>
       </div>
     </div>
@@ -472,26 +443,35 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
           <div class="kr-icon">3.2</div>
           <div class="kr-text-wrap">
             <div class="kr-eyebrow">Key Result 3.2</div>
-            <div class="kr-title">Assegurar média ≥ 7,5 nas avaliações técnicas finais da EDF para analistas em transição</div>
+            <div class="kr-title">Assegurar média igual ou superior a 7,5 nas avaliações técnicas finais da EDF para analistas em transição</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-edf">EDF</span><span class="chip chip-gray">Meta: média ≥ 7,5 · Dez/26</span></div>
+        <div class="kr-chips"><span class="chip chip-edf">EDF</span></div>
+        <div class="kr-next-badges">
+          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
+          <span class="nbadge nbadge-doc">📄 Documentação</span>
+          <span class="nbadge nbadge-valid">✅ Validação</span>
+        </div>
+      </div>
+      <div class="kr-dep">
+        <span class="kr-dep-icon">🔗</span>
+        <span><strong>Conciliado com KR 3.1</strong> — A avaliação técnica final pressupõe que os analistas passaram pela trilha completa da EDF. Sem cobertura igual ou superior a 90% (KR 3.1), a média não é representativa.</span>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr32')">Ver detalhes <span class="toggle-icon">›</span></button></div>
       <div class="kr-detail">
         <div class="metrics-row">
-          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val">A levantar em Abr/26 — médias históricas das avaliações EDF não consolidadas</div></div>
-          <div class="metric-balloon mt"><span class="metric-balloon-icon">🎯</span><span class="metric-balloon-lbl">Meta</span><div class="metric-balloon-val"><strong>Média ≥ 7,5</strong> nas avaliações técnicas finais da EDF por turma</div></div>
-          <div class="metric-balloon st"><span class="metric-balloon-icon">🚀</span><span class="metric-balloon-lbl">Stretch</span><div class="metric-balloon-val">Média <strong>≥ 8,0</strong> com plano de reforço para analistas abaixo de 7,0</div></div>
+          <div class="metric-balloon bl"><span class="metric-balloon-icon">📍</span><span class="metric-balloon-lbl">Baseline</span><div class="metric-balloon-val">A levantar em Abr/26, médias históricas das avaliações EDF não consolidadas</div></div>
+          <div class="metric-balloon mt"><span class="metric-balloon-icon">🎯</span><span class="metric-balloon-lbl">Meta</span><div class="metric-balloon-val"><strong>Média igual ou superior a 7,5</strong> nas avaliações técnicas finais da EDF por turma</div></div>
+          <div class="metric-balloon st"><span class="metric-balloon-icon">🚀</span><span class="metric-balloon-lbl">Stretch</span><div class="metric-balloon-val">Média <strong>igual ou superior a 8,0</strong> com plano de reforço para analistas abaixo de 7,0</div></div>
         </div>
         <div class="narrative-balloon">
           <div class="narrative-balloon-lbl">Contexto e como medir</div>
-          <div class="narrative-text">Estamos saindo de avaliações não padronizadas e sem histórico consolidado. Queremos chegar em avaliações padronizadas por tipo de Move, com <strong>média ≥ 7,5 por turma</strong> e plano de reforço obrigatório para quem não atingir a nota.<br><br><strong>Como medir:</strong> média das notas nas avaliações técnicas finais por turma — acompanhada mensalmente e apresentada a M2/M3.</div>
+          <div class="narrative-text">Estamos saindo de avaliações não padronizadas e sem histórico consolidado. Queremos chegar em avaliações padronizadas por tipo de Move, com <strong>média igual ou superior a 7,5 por turma</strong> e plano de reforço obrigatório para quem não atingir a nota.<br><br><strong>Como medir:</strong> média das notas nas avaliações técnicas finais por turma, acompanhada mensalmente e apresentada a M2/M3.</div>
         </div>
         <div class="bets-section-lbl"><span class="bets-section-lbl-icon">🏆</span> Apostas (BETs)</div>
         <div class="bets-grid">
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Padronização das avaliações técnicas finais da EDF</div><div class="bet-desc">Criar avaliação padronizada por tipo de Move — critérios claros, peso por competência e nota mínima definida antes do primeiro ciclo.</div></div></div>
-          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Plano de reforço para analistas abaixo da média</div><div class="bet-desc">Estruturar plano de reforço obrigatório para quem não atingir 7,5 — com prazo de reavaliação e critério formal antes da entrada no novo distrito.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Padronização das avaliações técnicas finais da EDF</div><div class="bet-desc">Criar avaliação padronizada por tipo de Move, critérios claros, peso por competência e nota mínima definida antes do primeiro ciclo.</div></div></div>
+          <div class="bet-balloon"><div class="bet-trophy">🏆</div><div><div class="bet-name">Plano de reforço para analistas abaixo da média</div><div class="bet-desc">Estruturar plano de reforço obrigatório para quem não atingir 7,5, com prazo de reavaliação e critério formal antes da entrada no novo distrito.</div></div></div>
         </div>
       </div>
     </div>
@@ -499,55 +479,199 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 
   <hr class="divider">
 
-  <!-- ══ PRÓXIMOS PASSOS ══ -->
-  <div class="pp-section">
-    <h2>Próximos Passos</h2>
-    <p class="pp-sub">Marque as tarefas concluídas.</p>
-    <div class="pp-cols">
-      <div class="pp-col-infra">
-        <div class="pp-col-title"><span>🔧</span> Infraestrutura e migração</div>
-        <div class="pp-items">
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Criar planilha de WFM e tracker de atividades do pack por frente</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Construir RACI das três frentes com mapeamento de SPOFs e backup por processo</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Definir e configurar ferramenta de IA para os 3 fluxos candidatos</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Criar tracker de presença e avaliações da EDF por analista em Move</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Implementar registro semanal de horas de trainers e buddies</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-        </div>
-      </div>
-      <div class="pp-col-doc">
-        <div class="pp-col-title"><span>📄</span> Documentação</div>
-        <div class="pp-items">
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Inventariar processos ativos e levantar nível atual de documentação</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Levantar baselines: cobertura EDF, médias das avaliações, % docs nível 3</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Documentar trilha EDF redesenhada para analistas em transição</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Criar SOP de convocação de Moves para a EDF e plano de reforço abaixo de 7,5</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Documentar fluxos de IA com protocolo de revisão humana antes de escalar</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-        </div>
-      </div>
-      <div class="pp-col-val">
-        <div class="pp-col-title"><span>✅</span> Validação e apresentação</div>
-        <div class="pp-items">
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Apresentar matriz de WFM completa para M2/M3 até Jun/26</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Alinhar critérios de nível 3 e QA com liderança antes de iniciar auditoria</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Apresentar RACI e auditoria de resiliência (zero SPOFs) para M2/M3 até Set/26</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Validar redesenho da trilha EDF com distritos e liderança antes do primeiro ciclo</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-          <div class="pp-item"><input type="checkbox" class="pp-check" onchange="toggleDone(this)"><div class="pp-item-body"><div class="pp-item-text">Apresentar ganho de tempo com IA e médias EDF para M2/M3 no fechamento Dez/26</div><div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome…"></div></div></div>
-        </div>
-      </div>
+  <!-- LEGENDA -->
+  <div class="legend-box">
+    <div class="legend-title">Legenda dos balões de próximos passos</div>
+    <div class="legend-row">
+      <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
+      <span class="nbadge nbadge-doc">📄 Documentação</span>
+      <span class="nbadge nbadge-valid">✅ Validação</span>
+      <span class="legend-dep">🔗 Conciliado com outro KR</span>
     </div>
   </div>
 
-  <!-- ══ GLOSSÁRIO ══ -->
+  <!-- PRÓXIMOS PASSOS -->
+  <div class="pp-section">
+    <h2>Próximos Passos</h2>
+    <p class="pp-sub">Marque as tarefas concluídas e indique o nome do responsável por cada ação. As tarefas estão organizadas por Key Result em ordem crescente para facilitar o acompanhamento e a distribuição de responsabilidades no time.</p>
+    <div class="pp-cols">
+
+      <div class="pp-col-infra">
+        <div class="pp-col-title"><span>🔧</span> Infraestrutura e migração</div>
+        <div class="pp-items">
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 1.1</div>
+              <div class="pp-item-text">Definir e configurar ferramenta de IA para os 3 fluxos candidatos</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 1.2</div>
+              <div class="pp-item-text">Criar owner por documento e ciclo de revisão de 90 dias para cada processo</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 1.3</div>
+              <div class="pp-item-text">Construir RACI das três frentes com mapeamento de SPOFs e backup por processo</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 2.1</div>
+              <div class="pp-item-text">Criar planilha de WFM e tracker de atividades da pack por frente</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 2.2</div>
+              <div class="pp-item-text">Implementar registro semanal de horas de trainers e buddies</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 3.1</div>
+              <div class="pp-item-text">Criar tracker de presença e avaliações da EDF por analista em Move</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pp-col-doc">
+        <div class="pp-col-title"><span>📄</span> Documentação</div>
+        <div class="pp-items">
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 1.1</div>
+              <div class="pp-item-text">Documentar fluxos de IA com protocolo de revisão humana antes de escalar</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 1.2</div>
+              <div class="pp-item-text">Inventariar processos ativos e levantar nível atual de documentação</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 1.3</div>
+              <div class="pp-item-text">Levantar baselines: cobertura EDF, médias das avaliações e percentual de docs nível 3</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 2.1</div>
+              <div class="pp-item-text">Documentar estimativa-padrão de horas por atividade e premissas validadas com o time</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 3.1</div>
+              <div class="pp-item-text">Criar SOP de convocação de Moves para a EDF e plano de reforço para notas abaixo de 7,5</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 3.2</div>
+              <div class="pp-item-text">Documentar trilha EDF redesenhada e avaliação padronizada por tipo de Move</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pp-col-val">
+        <div class="pp-col-title"><span>✅</span> Validação e apresentação</div>
+        <div class="pp-items">
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 1.1</div>
+              <div class="pp-item-text">Apresentar ganho de tempo com IA para M2/M3 no fechamento Dez/26</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 1.2</div>
+              <div class="pp-item-text">Alinhar critérios de nível 3 e QA com liderança antes de iniciar auditoria</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 1.3</div>
+              <div class="pp-item-text">Apresentar RACI e auditoria de resiliência (zero SPOFs) para M2/M3 até Set/26</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 2.1 · KR 2.2</div>
+              <div class="pp-item-text">Apresentar matriz de WFM completa e gap de horas para M2/M3 até Jun/26</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 3.1</div>
+              <div class="pp-item-text">Validar redesenho da trilha EDF com distritos e liderança antes do primeiro ciclo</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+          <div class="pp-item">
+            <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
+            <div class="pp-item-body">
+              <div class="pp-item-kr">KR 3.2</div>
+              <div class="pp-item-text">Apresentar médias EDF por turma para M2/M3 no fechamento Dez/26</div>
+              <div class="pp-resp"><span class="pp-resp-label">Resp:</span><input class="pp-resp-input" placeholder="nome do responsável…"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- GLOSSÁRIO -->
   <div class="gloss">
     <h2>Glossário de Métricas</h2>
     <div class="gloss-grid">
-      <div class="gloss-item"><div class="gloss-term">Documentação nível ≥ 3</div><div class="gloss-def">Nível de maturidade documental que inclui fluxograma atualizado, responsáveis definidos, rotina de revisão e aprovação em auditoria conforme o Maturity Index.</div></div>
-      <div class="gloss-item"><div class="gloss-term">SPOF (Single Point of Failure)</div><div class="gloss-def">Ponto único de falha: situação em que a ausência de uma única pessoa impede a continuidade de um processo crítico do pack.</div></div>
+      <div class="gloss-item"><div class="gloss-term">Documentação nível igual ou superior a 3</div><div class="gloss-def">Nível de maturidade documental que inclui fluxograma atualizado, responsáveis definidos, rotina de revisão e aprovação em auditoria conforme o Maturity Index.</div></div>
+      <div class="gloss-item"><div class="gloss-term">SPOF (Single Point of Failure)</div><div class="gloss-def">Ponto único de falha: situação em que a ausência de uma única pessoa impede a continuidade de um processo crítico da pack.</div></div>
       <div class="gloss-item"><div class="gloss-term">WFM nível 3</div><div class="gloss-def">Estágio de maturidade em Workforce Management onde 100% das horas são planejadas e controladas, com gap entre planejado e realizado zerado mensalmente.</div></div>
       <div class="gloss-item"><div class="gloss-term">RACI</div><div class="gloss-def">Matriz que define: Responsável (executa), Aprovador (decide), Consultado (contribui) e Informado (recebe). Ferramenta central para eliminar SPOFs.</div></div>
-      <div class="gloss-item"><div class="gloss-term">EDF — Escola de Fraude</div><div class="gloss-def">Programa de excelência técnica para integração de analistas em transição (Moves) — com trilha completa de presença e avaliações finais obrigatórias.</div></div>
+      <div class="gloss-item"><div class="gloss-term">EDF (Escola de Fraude)</div><div class="gloss-def">Programa de excelência técnica para integração de analistas em transição (Moves), com trilha completa de presença e avaliações finais obrigatórias.</div></div>
       <div class="gloss-item"><div class="gloss-term">Move</div><div class="gloss-def">Movimentação interna de analista entre distritos, implicando mudança de escopo operacional e necessidade de capacitação técnica pela EDF.</div></div>
-      <div class="gloss-item"><div class="gloss-term">Revisão Humana (IA)</div><div class="gloss-def">Etapa obrigatória antes de qualquer output gerado por IA ser usado em processo ou comunicação — garante qualidade e responsabilidade humana sobre o resultado.</div></div>
+      <div class="gloss-item"><div class="gloss-term">Revisão Humana (IA)</div><div class="gloss-def">Etapa obrigatória antes de qualquer output gerado por IA ser usado em processo ou comunicação, garantindo qualidade e responsabilidade humana sobre o resultado.</div></div>
       <div class="gloss-item"><div class="gloss-term">Quality Assurance (QA)</div><div class="gloss-def">Verificação estruturada de que os processos documentados atendem aos critérios de conformidade nível 3 antes de serem considerados aprovados em auditoria interna.</div></div>
     </div>
   </div>
