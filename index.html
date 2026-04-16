@@ -74,9 +74,11 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 .chip-smart{background:#E0F2FE;color:#0369A1}
 .kr-next-badges{display:flex;flex-wrap:wrap;gap:6px;padding-left:50px;margin-bottom:14px}
 .nbadge{font-size:11px;font-weight:600;border-radius:20px;padding:4px 12px;display:inline-flex;align-items:center;gap:5px;line-height:1.3}
-.nbadge-infra{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
-.nbadge-doc{background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0}
-.nbadge-valid{background:var(--nu-light);color:var(--nu2);border:1px solid var(--nu-mid)}
+.nbadge-ia     {background:#FEE2E2;color:#991B1B;border:1px solid #FECACA}
+.nbadge-risk   {background:#DCFCE7;color:#14532D;border:1px solid #86EFAC}
+.nbadge-resil  {background:#DBEAFE;color:#1E3A8A;border:1px solid #93C5FD}
+.nbadge-mon    {background:#FCE7F3;color:#831843;border:1px solid #F9A8D4}
+.nbadge-consult{background:#F3F4F6;color:#374151;border:1px solid #D1D5DB}
 .kr-dep{margin:0 24px 14px;padding:10px 14px;background:#FFF7ED;border:1px solid #FED7AA;border-left:4px solid #F97316;border-radius:8px;display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#92400E;line-height:1.5}
 .kr-dep-icon{font-size:14px;flex-shrink:0;margin-top:1px}
 .kr-dep strong{font-weight:700;color:#7C2D12}
@@ -224,11 +226,8 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
             <div class="kr-title">Implementar IA em 3 fluxos críticos, garantindo 100% de revisão humana e mensuração de ganho de tempo em atividades da pack</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-ia">✦ IA</span></div>
         <div class="kr-next-badges">
-          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
-          <span class="nbadge nbadge-doc">📄 Documentação</span>
-          <span class="nbadge nbadge-valid">✅ Validação</span>
+          <span class="nbadge nbadge-ia">🔴 Efficiency (IA)</span>
         </div>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr11')">Ver detalhes <span class="toggle-icon">›</span></button></div>
@@ -260,11 +259,8 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
             <div class="kr-title">Garantir documentação técnica nível igual ou superior a 3 para 100% dos processos, com fluxogramas, rotinas de atualização e aprovação em auditoria, focando em QA</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-gov">Governança / QA</span></div>
         <div class="kr-next-badges">
-          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
-          <span class="nbadge nbadge-doc">📄 Documentação</span>
-          <span class="nbadge nbadge-valid">✅ Validação</span>
+          <span class="nbadge nbadge-risk">🟢 Risk &amp; Controls</span>
         </div>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr12')">Ver detalhes <span class="toggle-icon">›</span></button></div>
@@ -296,11 +292,8 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
             <div class="kr-title">Mapear os processos das três frentes em uma matriz de responsabilidades que elimine pontos únicos de falha</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-gov">Governança / SPOF</span></div>
         <div class="kr-next-badges">
-          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
-          <span class="nbadge nbadge-doc">📄 Documentação</span>
-          <span class="nbadge nbadge-valid">✅ Validação</span>
+          <span class="nbadge nbadge-resil">🔵 Op. Resilience</span>
         </div>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr13')">Ver detalhes <span class="toggle-icon">›</span></button></div>
@@ -345,11 +338,9 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
             <div class="kr-title">Garantir que igual ou superior a 80% dos analistas elegíveis concluam ao menos 1 trilha de Smart Onboarding por trimestre</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-smart">Smart Onboarding</span></div>
         <div class="kr-next-badges">
-          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
-          <span class="nbadge nbadge-doc">📄 Documentação</span>
-          <span class="nbadge nbadge-valid">✅ Validação</span>
+          <span class="nbadge nbadge-ia">🔴 Efficiency (IA)</span>
+          <span class="nbadge nbadge-mon">🔍 Monitoring</span>
         </div>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr21')">Ver detalhes <span class="toggle-icon">›</span></button></div>
@@ -381,11 +372,9 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
             <div class="kr-title">Converter igual ou superior a 60% das horas de ociosidade mapeadas em horas de Smart Onboarding registradas no WFM/Jira</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-smart">Smart Onboarding</span><span class="chip chip-efic">Eficiência / WFM</span></div>
         <div class="kr-next-badges">
-          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
-          <span class="nbadge nbadge-doc">📄 Documentação</span>
-          <span class="nbadge nbadge-valid">✅ Validação</span>
+          <span class="nbadge nbadge-ia">🔴 Efficiency (IA)</span>
+          <span class="nbadge nbadge-mon">🔍 Monitoring</span>
         </div>
       </div>
       <div class="kr-dep">
@@ -421,11 +410,8 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
             <div class="kr-title">Reduzir em 30% a taxa de erros de decisão nos tópicos cobertos pelas trilhas</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-smart">Smart Onboarding</span><span class="chip chip-gov">Qualidade</span></div>
         <div class="kr-next-badges">
-          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
-          <span class="nbadge nbadge-doc">📄 Documentação</span>
-          <span class="nbadge nbadge-valid">✅ Validação</span>
+          <span class="nbadge nbadge-risk">🟢 Risk &amp; Controls</span>
         </div>
       </div>
       <div class="kr-dep">
@@ -474,11 +460,9 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
             <div class="kr-title">Reduzir solicitações de shadowing pós-treinamento para no máximo 20% dos participantes do Move</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-edf">EDF Evolved</span></div>
         <div class="kr-next-badges">
-          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
-          <span class="nbadge nbadge-doc">📄 Documentação</span>
-          <span class="nbadge nbadge-valid">✅ Validação</span>
+          <span class="nbadge nbadge-resil">🔵 Op. Resilience</span>
+          <span class="nbadge nbadge-mon">🔍 Monitoring</span>
         </div>
       </div>
       <div class="kr-toggle-row"><button class="toggle-btn" onclick="toggleKR('kr31')">Ver detalhes <span class="toggle-icon">›</span></button></div>
@@ -510,11 +494,9 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
             <div class="kr-title">Assegurar média igual ou superior a 7,5 nas avaliações técnicas finais da EDF para analistas em transição</div>
           </div>
         </div>
-        <div class="kr-chips"><span class="chip chip-edf">EDF Evolved</span></div>
         <div class="kr-next-badges">
-          <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
-          <span class="nbadge nbadge-doc">📄 Documentação</span>
-          <span class="nbadge nbadge-valid">✅ Validação</span>
+          <span class="nbadge nbadge-risk">🟢 Risk &amp; Controls</span>
+          <span class="nbadge nbadge-mon">🔍 Monitoring</span>
         </div>
       </div>
       <div class="kr-dep">
@@ -545,11 +527,13 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 
   <!-- LEGENDA -->
   <div class="legend-box">
-    <div class="legend-title">Legenda dos balões de próximos passos</div>
+    <div class="legend-title">Legenda dos workstreams</div>
     <div class="legend-row">
-      <span class="nbadge nbadge-infra">🔧 Infraestrutura</span>
-      <span class="nbadge nbadge-doc">📄 Documentação</span>
-      <span class="nbadge nbadge-valid">✅ Validação</span>
+      <span class="nbadge nbadge-ia">🔴 Efficiency (IA)</span>
+      <span class="nbadge nbadge-risk">🟢 Risk &amp; Controls</span>
+      <span class="nbadge nbadge-resil">🔵 Op. Resilience</span>
+      <span class="nbadge nbadge-mon">🔍 Monitoring</span>
+      <span class="nbadge nbadge-consult">⚪ Consultant / Support</span>
       <span class="legend-dep">🔗 Conciliado com outro KR</span>
     </div>
   </div>
@@ -557,11 +541,11 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
   <!-- PRÓXIMOS PASSOS -->
   <div class="pp-section">
     <h2>Próximos Passos</h2>
-    <p class="pp-sub">Marque as tarefas concluídas e indique o nome do responsável por cada ação. As tarefas estão organizadas por Key Result em ordem crescente para facilitar o acompanhamento e a distribuição de responsabilidades no time.</p>
+    <p class="pp-sub">Marque as tarefas concluídas e indique o responsável. As tarefas estão organizadas por Key Result e agrupadas por workstream: Efficiency (IA) e Op. Resilience à esquerda, Risk &amp; Controls ao centro, Monitoring e Validação à direita.</p>
     <div class="pp-cols">
 
       <div class="pp-col-infra">
-        <div class="pp-col-title"><span>🔧</span> Infraestrutura e migração</div>
+        <div class="pp-col-title"><span>🔴</span> Efficiency (IA) · Op. Resilience</div>
         <div class="pp-items">
           <div class="pp-item">
             <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
@@ -615,7 +599,7 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
       </div>
 
       <div class="pp-col-doc">
-        <div class="pp-col-title"><span>📄</span> Documentação</div>
+        <div class="pp-col-title"><span>🟢</span> Risk &amp; Controls</div>
         <div class="pp-items">
           <div class="pp-item">
             <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
@@ -669,7 +653,7 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
       </div>
 
       <div class="pp-col-val">
-        <div class="pp-col-title"><span>✅</span> Validação e apresentação</div>
+        <div class="pp-col-title"><span>🔍</span> Monitoring · Validação</div>
         <div class="pp-items">
           <div class="pp-item">
             <input type="checkbox" class="pp-check" onchange="toggleDone(this)">
