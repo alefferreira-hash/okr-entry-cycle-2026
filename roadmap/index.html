@@ -61,7 +61,6 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 .lbadge{font-size:11px;font-weight:600;border-radius:20px;padding:3px 12px;display:inline-flex;align-items:center;gap:5px}
 .lbadge-o1{background:var(--o1-light);color:var(--o1-text);border:1px solid rgba(124,58,237,.25)}
 .lbadge-o2{background:var(--o2-light);color:var(--o2-text);border:1px solid rgba(67,56,202,.25)}
-.lbadge-o3{background:var(--o3-light);color:var(--o3-text);border:1px solid rgba(14,165,233,.25)}
 .lbadge-infra{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
 .lbadge-doc{background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0}
 .lbadge-valid{background:var(--nu-light);color:var(--nu2);border:1px solid var(--nu-mid)}
@@ -106,11 +105,9 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 .kr-block-header{padding:10px 14px;display:flex;align-items:center;gap:10px}
 .kr-block.o1 .kr-block-header{background:rgba(124,58,237,.06);border-bottom:1px solid rgba(124,58,237,.12)}
 .kr-block.o2 .kr-block-header{background:rgba(67,56,202,.06);border-bottom:1px solid rgba(67,56,202,.12)}
-.kr-block.o3 .kr-block-header{background:rgba(14,165,233,.06);border-bottom:1px solid rgba(14,165,233,.12)}
 .kr-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0}
 .kr-block.o1 .kr-dot{background:rgba(124,58,237,.12);color:#7C3AED;border:1.5px solid rgba(124,58,237,.25)}
 .kr-block.o2 .kr-dot{background:rgba(67,56,202,.12);color:#4338CA;border:1.5px solid rgba(67,56,202,.25)}
-.kr-block.o3 .kr-dot{background:rgba(14,165,233,.12);color:#0EA5E9;border:1.5px solid rgba(14,165,233,.25)}
 .kr-block-title{font-size:11.5px;font-weight:700;color:var(--gray-900);line-height:1.35;flex:1}
 
 /* TASKS */
@@ -185,11 +182,11 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 <div class="stats-bridge">
   <div class="stats-bridge-inner">
     <div class="stats">
-      <div class="stat-balloon"><span class="stat-num">3</span><span class="stat-label">Objetivos</span></div>
-      <div class="stat-balloon"><span class="stat-num">7</span><span class="stat-label">Key Results</span></div>
+      <div class="stat-balloon"><span class="stat-num">2</span><span class="stat-label">Objetivos</span></div>
+      <div class="stat-balloon"><span class="stat-num">4</span><span class="stat-label">Key Results</span></div>
       <div class="stat-balloon"><span class="stat-num">3</span><span class="stat-label">Trimestres</span></div>
       <div class="stat-balloon"><span class="stat-num" id="total-done">0</span><span class="stat-label">Concluídas</span></div>
-      <div class="stat-balloon"><span class="stat-num">21</span><span class="stat-label">Ações totais</span></div>
+      <div class="stat-balloon"><span class="stat-num">22</span><span class="stat-label">Ações totais</span></div>
     </div>
   </div>
 </div>
@@ -200,8 +197,7 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
   <div class="legend-bar">
     <span class="legend-bar-title">Legenda</span>
     <span class="lbadge lbadge-o1">● O1 · Level Up</span>
-    <span class="lbadge lbadge-o2">● O2 · Smart Onboarding</span>
-    <span class="lbadge lbadge-o3">● O3 · EDF Evolved</span>
+    <span class="lbadge lbadge-o2">● O2 · Entry Cycle de Excelência</span>
     <span class="legend-sep"></span>
     <span class="lbadge lbadge-infra">🔴 Efficiency (IA)</span>
     <span class="lbadge lbadge-doc">🟢 Risk &amp; Controls</span>
@@ -228,7 +224,7 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
       </div>
       <div class="quarter-body">
 
-        <div class="marco"><span class="marco-icon">🚩</span><div class="marco-text">Marco: Matriz de elegibilidade, RACI e baselines levantados até Jun/26</div></div>
+        <div class="marco"><span class="marco-icon">🚩</span><div class="marco-text">Marco: Baselines de SLA e tNPS levantados, RACI e inventário de módulos concluídos até Jun/26</div></div>
 
         <!-- KR 1.1 -->
         <div class="kr-block o1">
@@ -239,7 +235,7 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
           </div>
         </div>
 
-        <!-- KR 1.1 -->
+        <!-- KR 1.2 -->
         <div class="kr-block o1">
           <div class="kr-block-header"><div class="kr-dot">1.2</div><div class="kr-block-title">Documentação técnica nível ≥ 3 para 100% dos processos</div></div>
           <div class="task-list">
@@ -253,41 +249,34 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
           <div class="kr-block-header"><div class="kr-dot">1.3</div><div class="kr-block-title">Matriz RACI para eliminar SPOFs nas três frentes</div></div>
           <div class="task-list">
             <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-resil">🔵 Op. Resilience</span></div><div class="task-text">Construir RACI das três frentes com mapeamento de SPOFs e backup por processo</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-resil">🔵 Op. Resilience</span></div><div class="task-text">Levantar baselines: cobertura EDF, médias de avaliações e % docs nível 3</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-resil">🔵 Op. Resilience</span></div><div class="task-text">Levantar baselines: % docs nível 3, SLA de movimentação por distrito e tNPS histórico</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
           </div>
         </div>
 
         <!-- KR 2.1 -->
         <div class="kr-block o2">
-          <div class="kr-block-header"><div class="kr-dot">2.1</div><div class="kr-block-title">Adoption: ≥ 80% dos analistas elegíveis com 1 trilha por trimestre</div></div>
+          <div class="kr-block-header"><div class="kr-dot">2.1</div><div class="kr-block-title">SLA de resposta para movimentações internas</div></div>
           <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-ia">🔴 Efficiency (IA)</span></div><div class="task-text">Criar catálogo de trilhas com elegibilidade por distrito e step level</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-resil">🔵 Op. Resilience</span></div><div class="task-text">Levantar histórico de demandas no Jira e calcular baseline de SLA por distrito (ID, VP, MA, Gamers)</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-resil">🔵 Op. Resilience</span></div><div class="task-text">Criar dashboard de SLA com número único (média geral) para apresentação externa e breakdown por distrito para acompanhamento interno</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+          </div>
+        </div>
+
+        <!-- KR 2.2 -->
+        <div class="kr-block o2">
+          <div class="kr-block-header"><div class="kr-dot">2.2</div><div class="kr-block-title">Redução da duração dos treinamentos de movimentação interna</div></div>
+          <div class="task-list">
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-ia">🔴 Efficiency (IA)</span></div><div class="task-text">Inventariar e auditar todos os módulos dos treinamentos de movimentação por tipo de move (duração, responsável, utilidade)</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-risk">🟢 Risk &amp; Controls</span></div><div class="task-text">Realizar workshop de validação de módulos com representantes de ID, VP, MA e Gamers — classificando cada um como obrigatório, opcional ou a eliminar</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
           </div>
         </div>
 
         <!-- KR 2.3 -->
         <div class="kr-block o2">
-          <div class="kr-block-header"><div class="kr-dot">2.3</div><div class="kr-block-title">Decision quality: reduzir 30% erros decisórios nos tópicos das trilhas</div></div>
+          <div class="kr-block-header"><div class="kr-dot">2.3</div><div class="kr-block-title">tNPS ≥ 8 com taxa mínima de resposta de 85% nos assessments</div></div>
           <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-risk">🟢 Risk &amp; Controls</span></div><div class="task-text">Rodar deep dive nos dados de QA e contestações para mapear top 3 a 5 erros decisórios por distrito</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-          </div>
-        </div>
-
-        <!-- KR 3.1 -->
-        <div class="kr-block o3">
-          <div class="kr-block-header"><div class="kr-dot">3.1</div><div class="kr-block-title">EDF Evolved: shadowing pós-Move reduzido para ≤ 20%</div></div>
-          <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-resil">🔵 Op. Resilience</span></div><div class="task-text">Criar tracker de solicitações de shadowing por analista e por Move</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-resil">🔵 Op. Resilience</span></div><div class="task-text">Documentar trilha EDF redesenhada com foco em cobrir dúvidas recorrentes por tipo de Move</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-resil">🔵 Op. Resilience</span></div><div class="task-text">Validar redesenho da trilha EDF com distritos e liderança antes do primeiro ciclo de Move</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-          </div>
-        </div>
-
-        <!-- KR 3.2 -->
-        <div class="kr-block o3">
-          <div class="kr-block-header"><div class="kr-dot">3.2</div><div class="kr-block-title">EDF: média ≥ 7,5 nas avaliações técnicas finais</div></div>
-          <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-risk">🟢 Risk &amp; Controls</span></div><div class="task-text">Documentar avaliação padronizada por tipo de Move e plano de reforço para notas abaixo de 7,5</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-risk">🟢 Risk &amp; Controls</span></div><div class="task-text">Criar e padronizar formulário de tNPS pós-treinamento (NPS 0–10 + questões abertas por módulo + campo de sugestão)</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q1" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-risk">🟢 Risk &amp; Controls</span></div><div class="task-text">Definir protocolo de plano de ação para turmas com tNPS &lt; 8 (responsável, prazo e critério de reavaliação)</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
           </div>
         </div>
 
@@ -299,7 +288,7 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
       <div class="quarter-header">
         <div class="quarter-eyebrow">2º Trimestre</div>
         <div class="quarter-title">Jul · Ago · Set</div>
-        <div class="quarter-sub">Operação e adoção</div>
+        <div class="quarter-sub">Operação e medição</div>
         <div class="progress-wrap">
           <div class="progress-top">
             <span class="progress-label">Progresso</span>
@@ -310,9 +299,9 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
       </div>
       <div class="quarter-body">
 
-        <div class="marco"><span class="marco-icon">🚩</span><div class="marco-text">Marco: RACI auditada, Smart Onboarding ativo e primeira rodada de EDF medida até Set/26</div></div>
+        <div class="marco"><span class="marco-icon">🚩</span><div class="marco-text">Marco: RACI auditada, currículo revisado em operação, primeiros tNPS e SLAs sendo medidos até Set/26</div></div>
 
-        <!-- KR 1.1 -->
+        <!-- KR 1.2 -->
         <div class="kr-block o1">
           <div class="kr-block-header"><div class="kr-dot">1.2</div><div class="kr-block-title">Auditoria interna e revisão trimestral da documentação</div></div>
           <div class="task-list">
@@ -331,47 +320,27 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 
         <!-- KR 2.1 -->
         <div class="kr-block o2">
-          <div class="kr-block-header"><div class="kr-dot">2.1</div><div class="kr-block-title">Smart Onboarding em operação: campanha de adoção com liderança</div></div>
+          <div class="kr-block-header"><div class="kr-dot">2.1</div><div class="kr-block-title">SLA em operação: ritual mensal e monitoramento por distrito</div></div>
           <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-ia">🔴 Efficiency (IA)</span></div><div class="task-text">Amarrar metas de trilha nos 1:1 e plannings, com reports periódicos de adoção por liderança</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span></div><div class="task-text">Apresentar taxa de adoção de trilhas e conversão de ociosidade para M2/M3 trimestralmente</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-resil">🔵 Op. Resilience</span></div><div class="task-text">Instaurar ritual mensal de revisão de SLA com responsáveis por distrito — identificando desvios e acionando planos de correção</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span></div><div class="task-text">Apresentar SLA médio geral e breakdown por distrito para M2/M3 ao final do trimestre</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
           </div>
         </div>
 
         <!-- KR 2.2 -->
         <div class="kr-block o2">
-          <div class="kr-block-header"><div class="kr-dot">2.2</div><div class="kr-block-title">Idle time to learning: ≥ 60% da ociosidade convertida no WFM/Jira</div></div>
+          <div class="kr-block-header"><div class="kr-dot">2.2</div><div class="kr-block-title">Currículo revisado em operação nos primeiros ciclos de move</div></div>
           <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-ia">🔴 Efficiency (IA)</span></div><div class="task-text">Criar tag e fluxo padrão "Idle → Smart Onboarding" no WFM/Jira</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-ia">🔴 Efficiency (IA)</span></div><div class="task-text">Implementar ritual mensal de redistribuição de ociosidade com slots de Smart Onboarding</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-conc">🔗 Conciliado KR 2.1</span></div><div class="task-text">Iniciar conversão de horas ociosas com base na matriz de elegibilidade definida no KR 2.1</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-ia">🔴 Efficiency (IA)</span></div><div class="task-text">Aplicar currículo revisado nos primeiros ciclos de move e registrar duração real por turma e por tipo de movimentação</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
           </div>
         </div>
 
         <!-- KR 2.3 -->
         <div class="kr-block o2">
-          <div class="kr-block-header"><div class="kr-dot">2.3</div><div class="kr-block-title">Decision quality: alertas contextuais integrados às trilhas</div></div>
+          <div class="kr-block-header"><div class="kr-dot">2.3</div><div class="kr-block-title">tNPS: primeiros ciclos de coleta e monitoramento</div></div>
           <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-risk">🟢 Risk &amp; Controls</span></div><div class="task-text">Criar alertas e materiais de consulta rápida baseados nos padrões de erro mapeados no Q1</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-conc">🔗 Conciliado KR 2.1 e 2.2</span></div><div class="task-text">Integrar módulos de erro decisório às trilhas de Smart Onboarding em operação</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-          </div>
-        </div>
-
-        <!-- KR 3.1 -->
-        <div class="kr-block o3">
-          <div class="kr-block-header"><div class="kr-dot">3.1</div><div class="kr-block-title">EDF rodando: Q&A pós-treinamento e monitoramento de shadowing</div></div>
-          <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-resil">🔵 Op. Resilience</span></div><div class="task-text">Criar sessões de Q&A pós-treinamento e canais de dúvidas como alternativa ao shadowing individual</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span></div><div class="task-text">Monitorar % de shadowing mensalmente e comparar com baseline de 100%</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-          </div>
-        </div>
-
-        <!-- KR 3.2 -->
-        <div class="kr-block o3">
-          <div class="kr-block-header"><div class="kr-dot">3.2</div><div class="kr-block-title">EDF: primeiros ciclos de avaliação padronizada por tipo de Move</div></div>
-          <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-risk">🟢 Risk &amp; Controls</span></div><div class="task-text">Aplicar avaliação padronizada nas primeiras turmas de Move e registrar notas por turma</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-conc">🔗 Conciliado KR 3.1</span></div><div class="task-text">Monitorar correlação entre qualidade do treinamento redesenhado (KR 3.1) e notas das avaliações</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span></div><div class="task-text">Coletar tNPS nas primeiras turmas do ciclo revisado — monitorar taxa de resposta e acionar plano de ação se tNPS &lt; 8</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q2" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-conc">🔗 Conciliado KR 2.2</span></div><div class="task-text">Comparar tNPS das turmas antes e depois da revisão de módulos — verificar se redução de duração (KR 2.2) impactou percepção de qualidade</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
           </div>
         </div>
 
@@ -405,7 +374,7 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
           </div>
         </div>
 
-        <!-- KR 1.1 -->
+        <!-- KR 1.2 -->
         <div class="kr-block o1">
           <div class="kr-block-header"><div class="kr-dot">1.2</div><div class="kr-block-title">Segunda revisão trimestral da documentação</div></div>
           <div class="task-list">
@@ -415,43 +384,26 @@ body{font-family:'DM Sans',sans-serif;background:#F7F5FF;color:var(--gray-900);f
 
         <!-- KR 2.1 -->
         <div class="kr-block o2">
-          <div class="kr-block-header"><div class="kr-dot">2.1</div><div class="kr-block-title">Smart Onboarding: taxa de adoção consolidada no ano</div></div>
+          <div class="kr-block-header"><div class="kr-dot">2.1</div><div class="kr-block-title">SLA anual consolidado: comparativo Q1 vs Q3</div></div>
           <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q3" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span></div><div class="task-text">Apresentar taxa de adoção anual (% de elegíveis com ≥ 1 trilha/trimestre) para M2/M3 em Dez/26</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q3" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span></div><div class="task-text">Consolidar SLA anual por distrito — comparar Q1 vs Q3 e apresentar evolução para M2/M3 em Dez/26</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
           </div>
         </div>
 
         <!-- KR 2.2 -->
         <div class="kr-block o2">
-          <div class="kr-block-header"><div class="kr-dot">2.2</div><div class="kr-block-title">Idle time to learning: % de conversão consolidado no ciclo</div></div>
+          <div class="kr-block-header"><div class="kr-dot">2.2</div><div class="kr-block-title">Redução de duração consolidada: antes vs. depois da revisão</div></div>
           <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q3" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span></div><div class="task-text">Consolidar % de horas de ociosidade convertidas em Smart Onboarding no WFM/Jira e apresentar a M2/M3</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q3" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span></div><div class="task-text">Consolidar redução de duração dos treinamentos — comparar antes vs. depois da revisão por tipo de move e apresentar a M2/M3</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
           </div>
         </div>
 
         <!-- KR 2.3 -->
         <div class="kr-block o2">
-          <div class="kr-block-header"><div class="kr-dot">2.3</div><div class="kr-block-title">Decision quality: medir redução de erros antes vs. depois</div></div>
+          <div class="kr-block-header"><div class="kr-dot">2.3</div><div class="kr-block-title">tNPS anual consolidado por turma e tipo de move</div></div>
           <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q3" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-risk">🟢 Risk &amp; Controls</span></div><div class="task-text">Comparar taxa de erros decisórios antes e depois das trilhas por tópico e distrito</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q3" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span></div><div class="task-text">Apresentar redução de erros de decisão para M2/M3 no fechamento Dez/26</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-          </div>
-        </div>
-
-        <!-- KR 3.1 -->
-        <div class="kr-block o3">
-          <div class="kr-block-header"><div class="kr-dot">3.1</div><div class="kr-block-title">EDF Evolved: % de shadowing consolidado e evidenciado</div></div>
-          <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q3" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span></div><div class="task-text">Apresentar médias EDF por turma e % de shadowing para M2/M3 no fechamento Dez/26</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-          </div>
-        </div>
-
-        <!-- KR 3.2 -->
-        <div class="kr-block o3">
-          <div class="kr-block-header"><div class="kr-dot">3.2</div><div class="kr-block-title">EDF: média ≥ 7,5 consolidada por turma no ciclo</div></div>
-          <div class="task-list">
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q3" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-risk">🟢 Risk &amp; Controls</span></div><div class="task-text">Consolidar plano de reforço aplicado e resultados de reavaliação dos analistas abaixo de 7,5</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
-            <div class="task"><input type="checkbox" class="task-check" data-quarter="q3" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-conc">🔗 Conciliado KR 3.1</span></div><div class="task-text">Validar se redução de shadowing (KR 3.1) se reflete em melhora das notas médias por turma</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q3" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span></div><div class="task-text">Monitorar taxa de resposta dos assessments mensalmente — acionar campanha se taxa cair abaixo de 85%</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
+            <div class="task"><input type="checkbox" class="task-check" data-quarter="q3" onchange="markDone(this)"><div class="task-body"><div class="task-type-row"><span class="tbadge tbadge-mon">🔍 Monitoring</span><span class="tbadge tbadge-conc">🔗 Conciliado KR 2.2</span></div><div class="task-text">Apresentar tNPS médio consolidado do ano por turma e tipo de move — validar correlação com revisão de módulos (KR 2.2) para M2/M3 em Dez/26</div><div class="task-meta"><div class="task-resp">Resp: <input class="task-resp-input" placeholder="responsável…"></div><div class="task-link-wrap">🔗 <input class="task-link-input" placeholder="link do projeto…" oninput="showLinkBtn(this)"><a class="task-link-btn" target="_blank">Abrir</a></div></div></div></div>
           </div>
         </div>
 
